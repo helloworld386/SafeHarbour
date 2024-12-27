@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeHarbour - Log In</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .navbar {
+    
+    background: linear-gradient(90deg, #000000, #020a00);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px 8px 0 0; /* Only top corners rounded */
+    flex-wrap: wrap;
+}
+
+.navbar-brand a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-nav li {
+    position: relative;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    background: #f0f0f0;
+    color: #4a148c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav a:hover,
+.navbar-nav a:focus {
+    color: #ffffff;
+    background: #7b1fa2;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #ab47bc;
+    transition: width 0.3s;
+}
+
+.navbar-nav a:hover::after {
+    width: 100%;
+}
+
+
+        .login-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .login-container .show-password {
+            position: absolute;
+            right: 15px;
+            top: calc(50% - 12px);
+            cursor: pointer;
+            color: #007BFF;
+            font-size: 12px;
+        }
+
+        .login-container .forgot-password {
+            display: block;
+            text-align: left;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            color: #007BFF;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .login-container .remember-me {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 14px;
+        }
+
+        .login-container .remember-me input {
+            margin-right: 10px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .login-container button:hover {
+            background: #0056b3;
+        }
+
+        .login-container .signup-link {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .login-container .signup-link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="#">SafeHarbour</a>
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="form.html">Admission Form</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="myprofile.html">My Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <h2>Log In</h2>
+        <form>
+            <input type="email" placeholder="Email" required>
+            <div style="position: relative;">
+                <input type="password" placeholder="Password" required>
+                <span class="show-password">SHOW</span>
+            </div>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+            <div class="remember-me">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <button type="submit">Log In</button>
+        </form>
+        <p class="signup-link">Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+</body>
+</html>
